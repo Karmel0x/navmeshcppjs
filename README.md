@@ -10,6 +10,7 @@ navmesh source:
 # Todo
 - NavMesh::ConeOfVision - may be usefull too
 - class to instance pathfinding
+- possibility to pass polygons from js
 
 # Usage
 ```
