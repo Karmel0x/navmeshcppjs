@@ -17,10 +17,7 @@
       "cflags!": ["-fno-exceptions"],
       "cflags_cc!": ["-fno-exceptions"],
       "defines": ["NAPI_CPP_EXCEPTIONS"],
-      "libraries": [
-        "-lws2_32.lib",
-        "-lwinmm.lib"
-      ]
+      "libraries": []
     }
   ]
 }
