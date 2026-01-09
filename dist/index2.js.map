@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/index2.ts"],
+  "sourcesContent": ["\r\n// @ts-ignore\r\nimport navmeshcppjs from '../bindings/prebuilds/win32-x64/navmeshcppjs.node';\r\n// @ts-ignore\r\n//import navmeshcppjs from '../bindings/prebuilds/linux-x64/navmeshcppjs.node';\r\n\r\nexport type Point = {\r\n\tx: number;\r\n\ty: number;\r\n};\r\n\r\nclass Navmeshcppjs {\r\n\tstatic initialize(inflate = 0) {\r\n\t\tnavmeshcppjs.initialize(inflate);\r\n\t}\r\n\r\n\tstatic getPath(startPoint: Point, endPoint: Point): Point[] {\r\n\t\treturn navmeshcppjs.pf(startPoint.x, startPoint.y, endPoint.x, endPoint.y);\r\n\t}\r\n}\r\n\r\nexport default Navmeshcppjs;\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAEA,0BAAyB;AASzB,MAAM,aAAa;AAAA,EAXnB,OAWmB;AAAA;AAAA;AAAA,EAClB,OAAO,WAAW,UAAU,GAAG;AAC9B,wBAAAA,QAAa,WAAW,OAAO;AAAA,EAChC;AAAA,EAEA,OAAO,QAAQ,YAAmB,UAA0B;AAC3D,WAAO,oBAAAA,QAAa,GAAG,WAAW,GAAG,WAAW,GAAG,SAAS,GAAG,SAAS,CAAC;AAAA,EAC1E;AACD;AAEA,IAAO,iBAAQ;",
+  "names": ["navmeshcppjs"]
+}

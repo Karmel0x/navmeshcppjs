@@ -1,7 +1,8 @@
 
 // @ts-ignore
-import navmeshcppjs from './bindings/build/Release/navmeshcppjs.node';
-//const navmeshcppjs = require('./bindings/build/Release/navmeshcppjs.node');
+import navmeshcppjs from '../bindings/prebuilds/win32-x64/navmeshcppjs.node';
+// @ts-ignore
+//import navmeshcppjs from '../bindings/prebuilds/linux-x64/navmeshcppjs.node';
 
 export type Point = {
 	x: number;

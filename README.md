@@ -18,17 +18,18 @@ const Navmeshcppjs = require('../navmeshcppjs');
 
 Navmeshcppjs.initialize(); // atm static polygons for SR
 
-var startPoint = {x: 60, y: 80};
-var endPoint = {x: 240, y: 260};
-var path = Navmeshcppjs.getPath(startPoint, endPoint);
+let startPoint = {x: 60, y: 80};
+let endPoint = {x: 240, y: 260};
+let path = Navmeshcppjs.getPath(startPoint, endPoint);
 // [{x, y}, ...]
 ```
 
 # Build
 ```
-cd bindings
 npm install -g node-gyp
-npm install node-addon-api
+npm install
+
+cd bindings
 node-gyp configure
 node-gyp build
 ```

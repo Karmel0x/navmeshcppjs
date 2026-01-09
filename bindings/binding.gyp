@@ -11,13 +11,30 @@
         "main.cpp"
       ],
       "include_dirs": [
-		'../navmesh/source',
-		"<!(node -p \"require('node-addon-api').include_dir\")"
+        "../navmesh/source",
+        "<!(node -p \"require('node-addon-api').include_dir\")"
       ],
       "cflags!": ["-fno-exceptions"],
       "cflags_cc!": ["-fno-exceptions"],
       "defines": ["NAPI_CPP_EXCEPTIONS"],
-      "libraries": []
+      "libraries": [],
+      "configurations": {
+        "Release": {
+          "msvs_settings": {
+            "VCLinkerTool": {
+              "GenerateDebugInformation": "false"
+            }
+          }
+        }
+      },
+      "conditions": [
+            ["OS == 'win'", {
+                "product_dir": "../prebuilds/win32-x64"
+            }],
+            ["OS == 'linux'", {
+                "product_dir": "../prebuilds/linux-x64"
+            }]
+      ]
     }
   ]
 }

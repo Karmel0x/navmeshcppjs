@@ -1,5 +1,6 @@
 #pragma once
 #include "vector"
+#include <stddef.h>
 
 #include "point.h"
 #include "segment.h"

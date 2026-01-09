@@ -14,7 +14,7 @@
 		"outDir": "dist"
 	},
 	"include": [
-		"index2.ts",
+		"./src/*.ts",
 		"**/*.d.ts",
 	]
 }

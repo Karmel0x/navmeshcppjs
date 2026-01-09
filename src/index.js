@@ -1,5 +1,5 @@
 
-const navmeshcppjs = require('./bindings/build/Release/navmeshcppjs.node');
+const navmeshcppjs = require('../bindings/build/Release/navmeshcppjs.node');
 
 
 class Navmeshcppjs {

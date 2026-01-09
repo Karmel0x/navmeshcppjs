@@ -336,10 +336,11 @@ void genPolys(){
 void initialize(int inflate = 0){
 
 	genPolys();
-	printf("genPolys: %d\n", (int)polygons.size());
+	//printf("genPolys: %d\n", (int)polygons.size());
 	path_finder.AddPolygons(polygons, inflate);
 	
 }
+
 std::vector<NavMesh::Point> pf(int startX, int startY, int endX, int endY){
 
 	NavMesh::Point source_coordinates(startX, startY);
@@ -348,9 +349,9 @@ std::vector<NavMesh::Point> pf(int startX, int startY, int endX, int endY){
 	std::vector<NavMesh::Point> path = path_finder.GetPath(source_coordinates, dest_coordinates);
 
 	//printf("path: [%d, %d] => [%d, %d] %d\n", startX, startY, endX, endY, (int)path.size());
-	for (auto& element : path) {
-		//printf("%d, %d\n", element.x, element.y);
-	}
+	//for (auto& element : path) {
+	//	printf("%d, %d\n", element.x, element.y);
+	//}
 	return path;
 }
 
@@ -371,6 +372,7 @@ napi_value initialize1(napi_env env, napi_callback_info info) {
 	napi_create_int32(env, ret, &value);
 	return value;
 }
+
 napi_value pf1(napi_env env, napi_callback_info info) {
 	size_t argc = 4;
 	napi_value args[4];
@@ -402,6 +404,7 @@ napi_value pf1(napi_env env, napi_callback_info info) {
 
 	return node_array;
 }
+
 napi_value Init(napi_env env, napi_value exports) {
 
 	napi_value fn;

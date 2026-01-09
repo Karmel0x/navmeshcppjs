@@ -1,4 +1,16 @@
 {
   "name": "navmeshcppjs",
-  "main": "index.js"
+  "main": "index.js",
+  "scripts": {
+    "build": "node .esbuild.cjs"
+  },
+  "exports": {
+    "./*": {
+      "types": "./src/*.ts",
+      "default": "./dist/*.js"
+    }
+  },
+  "dependencies": {
+    "node-addon-api": "^8.5.0"
+  }
 }
